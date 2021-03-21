@@ -1,0 +1,34 @@
+body { background-color: #eeebdd;
+       color: #810000;}
+hr   {border-style: none;
+      border-top: 10px dotted #1b1717;
+      width:5%;}
+h1   { color: #630000;}
+h3   { color: #630000;}
+
+
+
+
+.column {
+  float: left;
+  width: 20%;
+  /*兩個column之間的位移程度*/
+}
+
+/* Clearfix (clear floats) */
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+th, td {
+  text-align: left;
+}
+
+/*
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}*/

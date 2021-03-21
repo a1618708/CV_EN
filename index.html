@@ -2,6 +2,7 @@
 <!--宣告文型式，在html4裡寫得很長很複雜，這裡是用html5就會呈現如上-->
 <html lang="en">
 <!--到html的closing tag為止以內的內容都是html的架構-->
+
 <head>
 <!--是html必要的部分，會包含一些必要資訊，寫在title上的是當你開啟分頁，分頁上面的名字-->
     <meta charset="UTF-8">
@@ -9,9 +10,10 @@
     <!--utg-8 encoding，可以讓文字有最大複雜度文字化け的現象-->
     <!--也有其他meta設定告訴瀏覽者依些本網站相關資訊，或是提供搜尋尹祺一個好找的tag-->
     <title>Duan's Personal Site</title>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<body>
+<body >
     <table cellspacing="20">
         <tr>
             <td><img src="my_cv_image.jpg" alt="duan profile picture" width="300" height="300"></td>
@@ -25,8 +27,8 @@
         </tr>
     </table>
 
-    <hr size="3" noshade>
-    <h3>Education</h3>
+    <hr>
+    <h3 >Education</h3>
     <ul>
         <li>Bachelor of Science (B.S.) in Chemical Engineering from National Taiwan University, 2010-2014</li>
         <ul>
@@ -62,47 +64,44 @@
     </table>
     <hr>
     <h3>Skills</h3>
-    <table cellspacing="10">
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                        <td>Mandarin</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td>
-                    </tr>
-                    <tr>
-                        <td>Japanese</td><td>&#11088;&#11088;&#11088;&#11088;</td>
-                    </tr>
-                    <tr>
-                        <td>English</td><td>&#11088;&#11088;&#11088;&#11088;</td>
-                    </tr>
-                    <tr>
-                        <td>Solve Problems</td><td>&#11088;&#11088;&#11088;&#11088;</td>
-                    </tr>
-                    <tr>
-                        <td>CAE Solution</td><td>&#11088;&#11088;&#11088;</td>
-                    </tr>
-                </table>
-            </td>
-            <td>
-                <table>
-                    <tr>
-                        <td>Python</td><td>&#11088;&#11088;&#11088;</td>
-                    </tr>
-                    <tr>
-                        <td>HTML</td><td>&#11088;&#11088;</td>
-                    </tr>
-                    <tr>
-                        <td>GMP Manufacturing</td><td>&#11088;&#11088;&#11088;</td>
-                    </tr>
-
-                    <tr>
-                        <td>Financial Plan</td><td>&#11088;&#11088;</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <hr size="3" noshade>
+    <div class="row">
+        <div class="column">
+            <table>
+                <tr>
+                    <td>Mandarin</td><td>&#11088;&#11088;&#11088;&#11088;&#11088;</td>
+                </tr>
+                <tr>
+                    <td>Japanese</td><td>&#11088;&#11088;&#11088;&#11088;</td>
+                </tr>
+                <tr>
+                    <td>English</td><td>&#11088;&#11088;&#11088;&#11088;</td>
+                </tr>
+                <tr>
+                    <td>Solve Problems</td><td>&#11088;&#11088;&#11088;&#11088;</td>
+                </tr>
+                <tr>
+                    <td>CAE Solution</td><td>&#11088;&#11088;&#11088;</td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <table>
+                <tr>
+                    <td>Python</td><td>&#11088;&#11088;&#11088;</td>
+                </tr>
+                <tr>
+                    <td>HTML</td><td>&#11088;&#11088;</td>
+                </tr>
+                <tr>
+                    <td>GMP Manufacturing</td><td>&#11088;&#11088;&#11088;</td>
+                </tr>
+                <tr>
+                    <td>Financial Plan</td><td>&#11088;&#11088;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr>
     <p><a href="hobbies.html">My Hobbies</a>  <a href="contact.html">Contact Me</a></p>
 
 
