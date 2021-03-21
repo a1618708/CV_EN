@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <?php
-      mb_language("Japanese");
-      mb_internal_encoding("UTF-8");
-      $to = "kusumia@hotmail.com";
-      $title = $_POST['title'];
-      $content = $_POST['content'];
-      if(mb_send_mail($to, $title, $content)){
-        echo "メールを送信しました";
-      } else {
-        echo "メールの送信に失敗しました";
-      };
+<?php
+
+//Import the PHPMailer class into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+
+require '../vendor/autoload.php';
+
+//Create a new PHPMailer instance
+$mail = new PHPMailer();
+//Set who the message is to be sent from
+$mail->setFrom('from@example.com', $_POST['name']);
+
+//Set who the message is to be sent to
+$mail->addAddress('kudumia@hotmail.com', 'Hsinyi Duan');
+//Set the subject line
+$mail->Subject = 'From CV site';
+
+//Replace the plain text body with one created manually
+$mail->AltBody = $_POST['content'];
+
+//send the message, check for errors
+if (!$mail->send()) {
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message sent!';
+}
     ?>
-  </body>
-</html>
